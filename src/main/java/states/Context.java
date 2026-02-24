@@ -10,10 +10,10 @@ public class Context implements EventListener {
     public ClockState currentState;
      	
     public Context() {
-    	currentState = AbstractTimer.Instance(); // set initial state
-        AbstractTimer.historyState = AbstractTimer.Instance();
+    	currentState = AbstractTimer.instance(); // set initial state
+        AbstractTimer.historyState = AbstractTimer.instance();
         	// set history state of Timer composite statechart
-        AbstractStopwatch.historyState = AbstractStopwatch.Instance();
+        AbstractStopwatch.historyState = AbstractStopwatch.instance();
     	// set history state of Stopwatch composite statechart        
     }
     

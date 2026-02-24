@@ -9,8 +9,8 @@ public abstract class ActiveTimer extends AbstractTimer {
 	
 	// use Singleton design pattern
     private static ActiveTimer instance = null;
-    public static ActiveTimer Instance() {
-        if (instance == null) instance = RunningTimer.Instance();
+    public static ActiveTimer instance() {
+        if (instance == null) instance = RunningTimer.instance();
         return instance;
     }
 
@@ -18,7 +18,7 @@ public abstract class ActiveTimer extends AbstractTimer {
     // which will be inherited by all its substates
     @Override
     public ClockState right() {
-    	return transition(IdleTimer.Instance());
+    	return transition(IdleTimer.instance());
     }
     public String getRightText() { return "reset"; }
 

@@ -7,8 +7,8 @@ public abstract class ActiveStopwatch extends AbstractStopwatch {
 	
 	// use Singleton design pattern
     private static ActiveStopwatch instance = null;
-    public static ActiveStopwatch Instance() {
-        if (instance == null) instance = RunningStopwatch.Instance();
+    public static ActiveStopwatch instance() {
+        if (instance == null) instance = RunningStopwatch.instance();
         return instance;
     }
 

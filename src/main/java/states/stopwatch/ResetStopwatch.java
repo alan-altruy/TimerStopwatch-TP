@@ -7,14 +7,14 @@ public class ResetStopwatch extends AbstractStopwatch {
 	// use Singleton design pattern
     private ResetStopwatch() {};
     private static ResetStopwatch instance = null;
-    public static ResetStopwatch Instance() {
+    public static ResetStopwatch instance() {
         if(instance == null) instance = new ResetStopwatch();
         return instance;
     }
 
     @Override
     public ClockState up() {
-    	return transition(ActiveStopwatch.Instance());
+    	return transition(ActiveStopwatch.instance());
     	}
 	    
 	public String getUpText() { return "run"; }
