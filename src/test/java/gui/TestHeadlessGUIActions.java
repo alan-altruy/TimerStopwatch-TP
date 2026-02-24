@@ -12,10 +12,10 @@ class TestHeadlessGUIActions extends TestGUIAbstract {
     @DisplayName("Clicking left switches mode to stopwatch")
     void testClickLeftSwitchesToStopwatch() {
         g.updateUI(c);
-        assertEquals("timer", g.myText2.getText());
+        assertEquals("TIMER", g.myText2.getText());
         g.b1.doClick(); // should call c.left()
         g.updateUI(c);
-        assertEquals("stopwatch", g.myText2.getText());
+        assertEquals("STOPWATCH", g.myText2.getText());
     }
 
     @Test

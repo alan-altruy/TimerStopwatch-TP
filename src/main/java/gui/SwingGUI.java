@@ -1,6 +1,5 @@
 package gui;
 
-import states.Context;
 import states.EventListener;
 
 import javax.swing.JFrame;
@@ -15,15 +14,15 @@ import java.awt.GridLayout;
 public class SwingGUI extends HeadlessGUI {
     // When running tests in headless CI we want to avoid creating a real JFrame.
     // Toggle this flag in tests using `SwingGUI.setShowRealGUI(false)`.
-    private static boolean SHOW_REAL_GUI = true;
+    private static boolean showRealGui = true;
 
     public SwingGUI(EventListener o) { super(o); }
 
-    public static void setShowRealGUI(boolean show) { SHOW_REAL_GUI = show; }
+    public static void setShowRealGUI(boolean show) { showRealGui = show; }
     
     protected void initGUI() {
         super.initGUI();
-        if (!SHOW_REAL_GUI) {
+        if (!showRealGui) {
             // Build the UI on a temporary panel so tests exercise the layout code
             buildUI(new JPanel());
             return;

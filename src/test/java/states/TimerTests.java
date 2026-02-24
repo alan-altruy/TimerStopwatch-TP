@@ -26,7 +26,7 @@ class TimerTests {
 		 */
 		current = context.currentState;
 		
-	    assertEquals(Mode.timer, current.getMode());
+	    assertEquals(Mode.TIMER, current.getMode());
 	    assertSame(IdleTimer.Instance(), current);
 	    assertEquals(0, AbstractTimer.getTimer(),"For the value of timer we ");
 	    assertEquals(0, AbstractTimer.getMemTimer(),"For the value of memTimer we ");
