@@ -8,27 +8,27 @@ public class RunningTimer extends ActiveTimer {
 	// use Singleton design pattern
 	private RunningTimer() {}; // make constructor invisible to clients
     private static RunningTimer instance = null;
-    public static RunningTimer Instance() {
+    public static RunningTimer instance() {
         if(instance == null) instance = new RunningTimer();                
         return instance;
     }
 
     @Override
     public ClockState up() {
-        return transition(PausedTimer.Instance());
+        return transition(PausedTimer.instance());
     }
     public String getUpText() { return "pause"; }
     
     @Override
     public ClockState right() {
-    	return transition(IdleTimer.Instance());
+    	return transition(IdleTimer.instance());
     }
     public String getRightText() { return "stop"; }
     
     @Override
     public ClockState doIt() {
     	timer--; // decrement timer after every tick
-    	if (timer <= 0) { return transition(RingingTimer.Instance()); }
+    	if (timer <= 0) { return transition(RingingTimer.instance()); }
     	else { return this; }
     }
     
