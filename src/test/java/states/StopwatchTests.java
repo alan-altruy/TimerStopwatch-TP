@@ -29,7 +29,7 @@ class StopwatchTests {
 		 */
 		current = context.currentState;
 		
-	    assertEquals(Mode.stopwatch, current.getMode());
+	    assertEquals(Mode.STOPWATCH, current.getMode());
 	    assertSame(ResetStopwatch.Instance(), current);
 	    assertEquals(0, AbstractStopwatch.getTotalTime(),"For the value of totalTime we ");
 	    assertEquals(0, AbstractStopwatch.getLapTime(),"For the value of lapTime we ");

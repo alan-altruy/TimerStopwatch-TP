@@ -3,7 +3,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public abstract class ClockState {
-    private static final Logger logger =
+    private static final Logger LOGGER =
             Logger.getLogger(ClockState.class.getName());
 	
     public abstract ClockState left(); // button 1 pressed
@@ -31,15 +31,15 @@ public abstract class ClockState {
     // entry and exit and do actions can be redefined by, and are only visible to, substates
     protected void entry() {
     	// the entry action of the state, which is empty (no action) by default
-        if (logger.isLoggable(Level.INFO)) {
-            logger.info("entering " + this.getClass().getName());
+        if (LOGGER.isLoggable(Level.INFO)) {
+            LOGGER.info("entering " + this.getClass().getName());
         }
     }
     	
     protected void exit() {
         // the exit action of the state, which is empty (no action) by default
-        if (logger.isLoggable(Level.INFO)) {
-            logger.info("exiting " + this.getClass().getName());
+        if (LOGGER.isLoggable(Level.INFO)) {
+            LOGGER.info("exiting " + this.getClass().getName());
         }
     }
     	

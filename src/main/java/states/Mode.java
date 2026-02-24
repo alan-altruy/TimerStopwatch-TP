@@ -1,3 +1,3 @@
 package states;
 
-public enum Mode {timer, stopwatch}
+public enum Mode {TIMER, STOPWATCH}
