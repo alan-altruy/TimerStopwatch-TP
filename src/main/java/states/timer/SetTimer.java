@@ -7,7 +7,7 @@ public class SetTimer extends AbstractTimer {
 	// use Singleton design pattern
 	private SetTimer() {}; // make constructor invisible to clients
     private static SetTimer instance = null;
-    static public SetTimer instance() {
+    public static SetTimer instance() {
         if(instance == null) instance = new SetTimer();             
         return instance;
     }
