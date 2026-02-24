@@ -18,6 +18,7 @@ class TimerTests {
 	}
 		
 	@Test
+	@DisplayName("Test the initial state of the timer")
 	void testInitialState() {
 		/* When initialising the context (see setup() method above)
 		 * its currentState will be initialised with the initial state
@@ -32,18 +33,21 @@ class TimerTests {
 	}
 	
 	@Test
+	@DisplayName("Test the initial state of the timer composite statechart")
 	void testInitialAbstractTimer() {
 		// The initial state of composite state AbstractTimer should be IdleTimer
 		assertSame(AbstractTimer.Instance(), IdleTimer.Instance());
 	}
 	
 	@Test
+	@DisplayName("Test the initial state of the ActiveTimer composite statechart")
 	void testInitialActiveTimer() {
 		// The initial state of composite state ActiveTimer should be RunningTimer
 		assertSame(ActiveTimer.Instance(), RunningTimer.Instance());
 	}
 	
 	@Test
+	@DisplayName("Test the history state of the timer composite statechart")
 	void testHistoryState() {
 		current = AbstractTimer.Instance();
 		// after processing the left() event, we should arrive in the initial state of AbstractStopwatch

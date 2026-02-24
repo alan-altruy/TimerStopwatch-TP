@@ -20,6 +20,7 @@ class StopwatchTests {
 	}
 		
 	@org.junit.jupiter.api.Test
+	@DisplayName("Test the initial state of the stopwatch")
 	void testInitialState() {
 		//context.tick(); //no tick() needed for this test;
 		/* When initialising the context (see setup() method above)
@@ -35,12 +36,14 @@ class StopwatchTests {
 	}
 
 	@org.junit.jupiter.api.Test
+	@DisplayName("Test the initial state of the stopwatch composite statechart")
 	void testInitialAbstractStopwatch() {
 		// The initial state of composite state AbstractStopwatch should be ResetStopwatch
 		assertSame(AbstractStopwatch.Instance(), ResetStopwatch.Instance());
 	}
 	
 	@Test
+	@DisplayName("Test the history state of the stopwatch composite statechart")
 	void testHistoryState() {
 		current = AbstractStopwatch.Instance();
 		// after processing the left() event, we should arrive in the initial state of AbstractStopwatch

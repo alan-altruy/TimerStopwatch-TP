@@ -19,6 +19,7 @@ class IdleTest {
 
 	//The following "regression test" was added after having found a bug in the code
 	@Test
+	@DisplayName("Test that the IdleTimer state is a singleton")
 	void testSingletonDP() {
 		// the initial state of the statechart should be an IdleTimer object
 		// that is exactly the same object as the "singleton" instance of the IdleTimer state
@@ -26,6 +27,7 @@ class IdleTest {
 	}
 
 	@Test
+	@DisplayName("Test the up event in the IdleTimer state")
 	void testUpNoTransition() {
 		/* test whether the up event leaves us in the IdleTimer state.
 		   (upon creation of IdleTimer state, memTimer is initialised to 0,
@@ -36,6 +38,7 @@ class IdleTest {
 	}
 
 	@Test
+	@DisplayName("Test the up event in the IdleTimer state with a transition")
 	void testUpWithTransition() {
 		/* test whether a series of events (and the corresponding transitions)
 		 * brings us to the ActiveTimer state,
@@ -54,6 +57,7 @@ class IdleTest {
 		}
 
 	@Test
+	@DisplayName("Test the right event in the IdleTimer state")
 	void testRight() {
 		// test whether the right() event brings us to the SetTimer state
 		assertSame(SetTimer.Instance(), context.currentState.right());
