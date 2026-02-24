@@ -20,7 +20,7 @@ class TestSwingGUIIntegration extends TestGUIAbstract {
         // switch to stopwatch mode
         g.b1.doClick(); // left
         g.updateUI(c);
-        assertEquals("stopwatch", g.myText2.getText());
+        assertEquals("STOPWATCH", g.myText2.getText());
 
         // start stopwatch
         g.b2.doClick(); // up -> run
@@ -55,7 +55,7 @@ class TestSwingGUIIntegration extends TestGUIAbstract {
 
         // ensure timer initial
         g.updateUI(c);
-        assertEquals("timer", g.myText2.getText());
+        assertEquals("TIMER", g.myText2.getText());
 
         // go to set timer
         g.b3.doClick(); // right

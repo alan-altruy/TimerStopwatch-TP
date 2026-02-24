@@ -47,7 +47,7 @@ public abstract class AbstractTimer extends ClockState {
     }
 
     public Mode getMode() {
-        return Mode.timer;
+        return Mode.TIMER;
     }
    
 }

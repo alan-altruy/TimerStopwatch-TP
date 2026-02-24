@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import states.timer.*;
 
 class TestTimerLabels extends TestGUIAbstract {
-	private static final Logger logger =
+	private static final Logger LOGGER =
 			Logger.getLogger(TestTimerLabels.class.getName());
 	void assertTimerLabels(AbstractTimer state) {
 		c.currentState = state;
 		String stateName = state.getClass().getSimpleName();
-		logger.info(stateName);
+		LOGGER.info(stateName);
 		g.updateUI(c);
 		assertEquals(g.b1.getText(),c.getLeftText(),"button 1 for state " + stateName);
 		assertEquals(g.b2.getText(),c.getUpText(),"button 2 for state " + stateName);
@@ -36,7 +36,7 @@ class TestTimerLabels extends TestGUIAbstract {
 		assertEquals("run",g.b2.getText());
 		assertEquals("set",g.b3.getText());
 		assertEquals("IdleTimer",g.myText3.getText());
-		assertEquals("timer",g.myText2.getText());
+		assertEquals("TIMER",g.myText2.getText());
 		assertEquals("memTimer = 0",g.myText1.getText());
 	};
 
@@ -49,7 +49,7 @@ class TestTimerLabels extends TestGUIAbstract {
 		assertEquals("inc 5",g.b2.getText());
 		assertEquals("done",g.b3.getText());
 		assertEquals("SetTimer",g.myText3.getText());
-		assertEquals("timer",g.myText2.getText());
+		assertEquals("TIMER",g.myText2.getText());
 		assertEquals("memTimer = 0",g.myText1.getText());
 	}
 

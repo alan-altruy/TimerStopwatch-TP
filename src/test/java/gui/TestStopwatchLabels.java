@@ -14,7 +14,7 @@ class TestStopwatchLabels extends TestGUIAbstract {
     	assertEquals("run",g.b2.getText());
     	assertEquals("(unused)",g.b3.getText());
     	assertEquals("totalTime = 0",g.myText1.getText());
-    	assertEquals("stopwatch",g.myText2.getText());
+    	assertEquals("STOPWATCH",g.myText2.getText());
     	assertEquals("ResetStopwatch",g.myText3.getText());
     }
 
@@ -28,7 +28,7 @@ class TestStopwatchLabels extends TestGUIAbstract {
     	assertEquals("split",g.b2.getText());
     	assertEquals("reset",g.b3.getText());
     	assertEquals("totalTime = 0",g.myText1.getText());
-    	assertEquals("stopwatch",g.myText2.getText());
+    	assertEquals("STOPWATCH",g.myText2.getText());
     	assertEquals("RunningStopwatch",g.myText3.getText());
     }
 

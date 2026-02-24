@@ -45,6 +45,6 @@ public abstract class AbstractStopwatch extends ClockState {
     }
     
 	public Mode getMode() {
-	        return Mode.stopwatch;
+	        return Mode.STOPWATCH;
 	    }
 	}
